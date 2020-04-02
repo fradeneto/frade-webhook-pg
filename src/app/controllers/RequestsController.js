@@ -3,6 +3,7 @@ const { Request } = require('../models');
 module.exports = {
   async index(req, res, next) {
     const { method, url, params, query, body, rawHeaders, headers } = req;
+
     const { remoteAddress } = req.connection;
 
     const requestIns = await Request.create({
