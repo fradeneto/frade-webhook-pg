@@ -1,10 +1,15 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('requests', {
+    return queryInterface.createTable('webhook', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false,
+      },
+      flag: {
+        type: Sequelize.STRING,
+        defaultValue: false,
         allowNull: false,
       },
       processado: {
@@ -56,6 +61,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('requests');
+    return queryInterface.dropTable('webhook');
   },
 };
