@@ -40,7 +40,9 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
     },
-    {}
+    {
+      tableName: 'webhook',
+    }
   );
 
   DbModel.associate = (models) => {
