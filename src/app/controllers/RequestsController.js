@@ -5,6 +5,7 @@ module.exports = {
     const { method, url, params, query, body, rawHeaders, headers } = req;
 
     const { remoteAddress } = req.connection;
+
     const requestIns = await Request.create({
       method,
       url,
