@@ -3,7 +3,8 @@ const { Request } = require('../models');
 module.exports = {
   async index(req, res, next) {
     const { method, url, params, query, body, rawHeaders, headers } = req;
-    const flag = process.env.FLAG;
+    console.log(process.env.FLAG);
+    const flag = process.env.FLAG ? process.env.FLAG : '';
     const { remoteAddress } = req.connection;
 
     const requestIns = await Request.create({
