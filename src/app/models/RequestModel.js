@@ -2,6 +2,10 @@ module.exports = (sequelize, DataTypes) => {
   const DbModel = sequelize.define(
     'Request',
     {
+      flag: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       processado: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
