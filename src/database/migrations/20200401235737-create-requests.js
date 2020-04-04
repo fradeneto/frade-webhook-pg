@@ -7,6 +7,7 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
+
       flag: {
         type: Sequelize.STRING,
         defaultValue: false,
